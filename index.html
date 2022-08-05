@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="style.css" rel="stylesheet">
     <style>
+         @media screen and (max-width: 365px) {
+            .bill
+            {margin-top:12px ;}
+         }
         @media screen and (max-width: 980px) {
             #frame{
                 margin-left: auto;
@@ -19,7 +23,10 @@
                 width:120px;
             }
             .bill{
-                width: 100px;
+                display: flex;
+                
+                flex-wrap: wrap;
+                
             }
             #graph{
                 display: block;
@@ -49,9 +56,9 @@
 <body class="">
    <div id="frame" class="inline-block border-solid border-4 max-h-full border-t-gray-800  w-2/5 ">
     <div id="data">
-    <div class=" ml-3 bg-gradient-to-r from-cyan-500 to-blue-500 ... p-6 rounded-lg text-black border-blue-900 border-spacing-72 border-solid flex flex-wrap mt-7 justify-around w-11/12 h-30" id="1">
+    <div class="cont ml-3 bg-gradient-to-r from-cyan-500 to-blue-500 ... p-6 rounded-lg text-black border-blue-900 border-spacing-72 border-solid flex flex-wrap mt-7 justify-around w-11/12 h-30" id="1">
         <input type="month" name="billingDate" class="dt rounded-md p-1 border-solid border-blue-500 border-spacing-10" id="date1">
-        <input type="number" placeholder="Bill ₹" name="amount" id="bill1" class="bill rounded-md p-1 float-right w-40">
+        <input type="number"  placeholder="Bill ₹" name="amount" id="bill1" class="bill rounded-md p-1 float-right w-40">
     </div>
     </div>
        <div class=" ml-3  p-6 rounded-lg text-black border-blue-900 border-spacing-72 border-solid flex my-3 justify-around w-4/5 h-30" id="buttons">
@@ -61,7 +68,7 @@
    </div>
    <div class="relative  mt-0 block  mr-auto text-center ml-auto h-1/2 w-7/12 float-right" id="graph">
      <button  type="submit" id="genGraph" class=" bg-gradient-to-r from-cyan-700 to-blue-700  text-white p-2 rounded-full mx-auto  mt-6 w-max text-2xl hover:bg-blue-800">Generate graph</button>
-     <canvas id="myChart" style="width:100%;max-width:800px;" ></canvas>
+     <canvas id="myChart" style="width:100%;max-width:800px; margin-left: auto; margin-right: auto;" ></canvas>
    </div>
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
